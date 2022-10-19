@@ -24,6 +24,6 @@ WHERE {
     ?res qudt:numericValue ?value .
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay ;
          geo:hasGeometry/geo:asWKT ?geom .
-    OPTIONAL { ?s ?p ?_id }
-    FILTER (geof:sfIntersects(?geom, bif:st_geomfromtext(?_id)))
+    OPTIONAL { ?s ?p ?_geo_asWKT }
+    FILTER (geof:sfIntersects(?geom, bif:st_geomfromtext(?_geo_asWKT)))
 }
