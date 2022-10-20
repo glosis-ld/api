@@ -7,6 +7,7 @@
 #+   - usedProcedure:
 #+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O
 #+     - http://w3id.org/glosis/model/procedure#carbonInorganicProcedure-InOrgC_calcul-caco3
+#+     - http://w3id.org/glosis/model/procedure#carbonInorganicProcedure-InOrgC_calcul-tc-oc
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
 #+     - http://w3id.org/glosis/model/layerhorizon#MolybdenumTotalElements
