@@ -1,0 +1,35 @@
+#+ summary: "Retrieve the average NitrogenTotal value for a specific geospatial region"
+#+ description: "NOTE: make sure response content type is application/json"
+#+ endpoint: "https://www.foodie-cloud.org/sparql"
+#+ tags: [ "json" ]
+#+ method: "GET"
+#+ enumerate:
+#+   - physioChemicalProperty:
+#+     - glosis_lh:NitrogenTotal
+#+     - http://dbpedia.org/resource/Alternative_rock
+#+ defaults:
+#+   - physioChemicalProperty: glosis_lh:NitrogenTotal
+#+ transform: {
+#+   "avg_nitrogen_total": "?avg_nitrogen_total",
+#+   "$anchor": "avg_nitrogen_total",
+#+ }
+
+
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
+
+SELECT (AVG(?value) as ?avg_nitrogen_total)
+WHERE {
+    ?obs a ?_physioChemicalProperty ;
+         sosa:hasResult ?res ;
+         sosa:hasFeatureOfInterest ?lay .
+    ?res qudt:numericValue ?value .
+    ?site iso:Site.typicalProfile/iso:Profile.element ?lay ;
+         geo:hasGeometry/geo:asWKT ?geom .
+    OPTIONAL { ?s ?p ?_geoWKT }
+    FILTER (geof:sfIntersects(?geom, bif:st_geomfromtext(?_geoWKT)))
+}
