@@ -94,5 +94,5 @@ WHERE {
         sosa:hasResult ?lu_res .
     ?lu_res rdf:type|skos:broader* ?lu_code .
     ?lu_code skos:prefLabel ?label .
-    ?label bif:contains "'PRIMARY SECTOR'"    
+    ?label bif:contains ?_landUse .
 }
