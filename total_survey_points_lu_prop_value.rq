@@ -68,7 +68,7 @@
 #+ transform: {
 #+   "physioChemicalProperty": "?property",
 #+   "$anchor": "physioChemicalProperty",
-#+   "avg_physioChemicalPropertytotal": "?avg_physioChemicalPropertytotal",
+#+   "total_survey_points": "?total_survey_points",
 #+ }
 
 
@@ -79,7 +79,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 
-SELECT (AVG(?value) as ?avg_physioChemicalPropertytotal) (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
+SELECT (COUNT(?site) as ?total_survey_points) (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
 WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
