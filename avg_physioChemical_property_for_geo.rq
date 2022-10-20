@@ -66,7 +66,8 @@
 #+ defaults:
 #+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
 #+ transform: {
-#+   "avg_nitrogen_total": "?avg_nitrogen_total",
+#+   "avg_physioChemicalPropertytotal": "?avg_physioChemicalPropertytotal",
+#+   "$anchor": "avg_physioChemicalPropertytotal",
 #+ }
 
 
@@ -77,7 +78,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 
-SELECT (AVG(?value) as ?avg_nitrogen_total)
+SELECT (AVG(?value) as ?avg_physioChemicalPropertytotal)
 WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
