@@ -6,7 +6,7 @@
 #+ enumerate:
 #+   - physioChemicalProperty:
 #+     - glosis_lh:NitrogenTotal
-#+     - http://dbpedia.org/resource/Alternative_rock
+#+     - http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
 #+ defaults:
 #+   - physioChemicalProperty: glosis_lh:NitrogenTotal
 #+ transform: {
