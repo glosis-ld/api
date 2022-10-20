@@ -363,7 +363,7 @@
 #+     - http://w3id.org/glosis/model/layerhorizon#Porosity
 #+     - http://w3id.org/glosis/model/layerhorizon#BoronTotalElements
 #+ defaults:
-#+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
+#+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#PH
 #+   - usedProcedure: http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O
 #+ transform: {
 #+   "avg_physioChemicalPropertytotal": "?avg_physioChemicalPropertytotal",
