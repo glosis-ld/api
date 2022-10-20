@@ -6,6 +6,7 @@
 #+ enumerate:
 #+   - usedProcedure:
 #+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O
+#+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHCaCl2
 #+     - http://w3id.org/glosis/model/procedure#carbonInorganicProcedure-InOrgC_calcul-tc-oc
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
