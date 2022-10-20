@@ -4,6 +4,17 @@
 SELECT DISTINCT ?property
 WHERE {
      VALUES (?property ) {
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph0-nh4cl")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph-unkn-m3")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph8-unkn")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph0-cohex")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph-unkn-edta")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph8-bacl2tea")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph7-unkn")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph7-nh4oac")     
      ("http://w3id.org/glosis/model/procedure#textureSumProcedure-SumTxtr_calcul")
      ("http://w3id.org/glosis/model/procedure#electricalConductivityProcedure-EC_ratio1-2.5")
      ("http://w3id.org/glosis/model/procedure#electricalConductivityProcedure-EC_ratio1-10")
