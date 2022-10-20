@@ -30,5 +30,6 @@ WHERE {
         sosa:hasResult ?lu_res .
     ?lu_res rdf:type|skos:broader* ?lu_code
     ?lu_code skos:prefLabel ?label .
-    ?label bif:contains ?_landUseLabel
+    ?label bif:contains ?_landUseLabel .
+    OPTIONAL { ?s ?p ?_landUseLabel }
 } 
