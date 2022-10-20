@@ -1,10 +1,5 @@
 #+ method: POST
 
-PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX dbp: <http://dbpedia.org/property/>
-PREFIX schema: <http://schema.org/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
 SELECT DISTINCT ?property
 WHERE {
      VALUES (?property ) {
