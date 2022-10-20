@@ -66,8 +66,9 @@
 #+ defaults:
 #+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
 #+ transform: {
+#+   "physioChemicalProperty": "?property",
+#+   "$anchor": "physioChemicalProperty",
 #+   "avg_physioChemicalPropertytotal": "?avg_physioChemicalPropertytotal",
-#+   "$anchor": "avg_physioChemicalPropertytotal",
 #+ }
 
 
@@ -80,7 +81,7 @@ PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ramon: <http://rdfdata.eionet.europa.eu/ramon/ontology/>
 
-SELECT (AVG(?value) as ?avg_physioChemicalPropertytotal)
+SELECT (AVG(?value) as ?avg_physioChemicalPropertytotal) (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
 WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
