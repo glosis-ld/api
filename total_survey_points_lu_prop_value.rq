@@ -68,7 +68,7 @@
 #+ transform: {
 #+   "physioChemicalProperty": "?property",
 #+   "$anchor": "physioChemicalProperty",
-#+   "total_survey_points": "?total_survey_points",
+#+   "avg_physioChemicalPropertytotal": "?avg_physioChemicalPropertytotal",
 #+ }
 
 
@@ -79,14 +79,14 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 
-
-SELECT COUNT (DISTINCT ?site) as ?total_survey_points (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
+SELECT (AVG(?value) as ?avg_physioChemicalPropertytotal) (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
 WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
-    ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
+    ?site iso:Site.typicalProfile/iso:Profile.element ?lay ;
+         geo:hasGeometry/geo:asWKT ?geom .
+    OPTIONAL { ?s ?p ?_geoWKT }
+    FILTER (geof:sfIntersects(?geom, bif:st_geomfromtext(?_geoWKT)))
 }
-
-    
