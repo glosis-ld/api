@@ -83,11 +83,11 @@ PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT distinct ?obs ?value (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
+SELECT ?obs ?value (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property)
 WHERE 
 {
   {
-    SELECT ?obs ?value
+    SELECT distinct ?obs ?value
     WHERE 
     {
        ?obs a ?_physioChemicalProperty_iri ;
