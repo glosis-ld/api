@@ -86,5 +86,6 @@ WHERE {
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
     FILTER (?value > ?_minValue)
+    OPTIONAL { ?s ?p ?_minValue }
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
 }
