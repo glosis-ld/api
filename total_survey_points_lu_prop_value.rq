@@ -23,7 +23,7 @@ WHERE {
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
-    FILTER (?value > ?_minValue_float)
+    FILTER (?value > ?_minValue) .
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
     ?lu sosa:hasFeatureOfInterest ?site ;
         sosa:observedProperty <http://w3id.org/glosis/model/siteplot#landUseClassProperty> ;
