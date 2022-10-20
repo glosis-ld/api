@@ -8,6 +8,7 @@
 #+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O
 #+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHCaCl2
 #+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHKCl
+#+     - http://w3id.org/glosis/model/procedure#pHProcedure-pHNaF
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
 #+     - http://w3id.org/glosis/model/layerhorizon#MolybdenumTotalElements
