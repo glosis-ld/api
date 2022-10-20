@@ -87,7 +87,7 @@ WHERE {
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
     FILTER (?value > ?_minValue_integer)
-    BIND (?_minValue_integer AS ?test)
+    BIND (STR(?_minValue_integer) AS ?test)
 #    OPTIONAL { ?s ?p ?_minValue_integer }
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
     ?lu sosa:hasFeatureOfInterest ?site ;
