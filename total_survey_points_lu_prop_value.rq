@@ -87,7 +87,7 @@ WHERE {
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
     FILTER (?value > ?_minValue_integer)
-    BIND (xsd:integer(100000000000 * ?_minValue_integer) AS ?trick)
+    BIND (100000000000 * ?_minValue_integer AS ?trick)
     OPTIONAL { ?s ?p ?trick }
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
     ?lu sosa:hasFeatureOfInterest ?site ;
