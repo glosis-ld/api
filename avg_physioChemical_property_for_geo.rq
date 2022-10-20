@@ -67,7 +67,6 @@
 #+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
 #+ transform: {
 #+   "avg_nitrogen_total": "?avg_nitrogen_total",
-#+   "$anchor": "avg_nitrogen_total",
 #+ }
 
 
