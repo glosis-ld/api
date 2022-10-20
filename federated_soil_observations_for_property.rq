@@ -90,4 +90,11 @@ WHERE {
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
     FILTER (?value > ?_minValue_integer)
+    ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
+    ?lu sosa:hasFeatureOfInterest ?site ;
+        sosa:observedProperty <http://w3id.org/glosis/model/siteplot#landUseClassProperty> ;
+        sosa:hasResult ?lu_res .
+    ?lu_res rdf:type|skos:broader* ?lu_code .
+    ?lu_code skos:prefLabel ?label .
+    ?label bif:contains ?_landUse .
 }
