@@ -6,28 +6,7 @@
 #+ enumerate:
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
-#+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases	
-#+     - http://w3id.org/glosis/model/layerhorizon#MolybdenumTotalElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#SulfurExtractableElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#AcidityExchangeable	
-#+     - http://w3id.org/glosis/model/layerhorizon#MagnesiumTotalElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#PotassiumExchangeableBases	
-#+     - http://w3id.org/glosis/model/layerhorizon#SandFractionTexture	
-#+     - http://w3id.org/glosis/model/layerhorizon#SodiumExtractableElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#ManganeseExtractableElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#BoronExtractableElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#CopperExtractableElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#IronTotalElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#ElectricalConductivity	
-#+     - http://w3id.org/glosis/model/layerhorizon#CadmiumTotalElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#ClayFractionTexture	
-#+     - http://w3id.org/glosis/model/layerhorizon#HydraulicConductivity	
-#+     - http://w3id.org/glosis/model/layerhorizon#SiltFractionTexture	
-#+     - http://w3id.org/glosis/model/layerhorizon#CarbonTotal	
-#+     - http://w3id.org/glosis/model/layerhorizon#CarbonInorganic	
-#+     - http://w3id.org/glosis/model/layerhorizon#ZincTotalElements	
-#+     - http://w3id.org/glosis/model/layerhorizon#OrganicMatter	
-#+     - http://w3id.org/glosis/model/layerhorizon#PH	
+#+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
 #+ defaults:
 #+   - physioChemicalProperty: http://w3id.org/glosis/model/layerhorizon#NitrogenTotal
 #+ transform: {
