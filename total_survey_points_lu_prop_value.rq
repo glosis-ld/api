@@ -1,0 +1,34 @@
+#+ summary: "Retrieve the average NitrogenTotal value for a specific geospatial region"
+#+ description: "NOTE: make sure response content type is application/json"
+#+ endpoint: "https://www.foodie-cloud.org/sparql"
+#+ tags: [ "json" ]
+#+ method: "GET"
+#+ transform: {
+#+   "total_survey_points": "?total_survey_points",
+#+   "$anchor": "total_survey_points",
+#+ }
+
+
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT count (DISTINCT ?site) as ?total_survey_points
+WHERE {
+    ?obs ?_physioChemicalProperty_iri ;
+         sosa:hasResult ?res ;
+         sosa:hasFeatureOfInterest ?lay .
+    ?res qudt:numericValue ?value .
+    FILTER (?value > ?_minValue_float)
+    ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
+    ?lu sosa:hasFeatureOfInterest ?site ;
+        sosa:observedProperty <http://w3id.org/glosis/model/siteplot#landUseClassProperty> ;
+        sosa:hasResult ?lu_res .
+    ?lu_res rdf:type|skos:broader* ?lu_code
+    ?lu_code skos:prefLabel ?label .
+    ?label bif:contains ?_landUseLabel
+} 
