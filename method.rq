@@ -5,9 +5,13 @@ PREFIX dbp: <http://dbpedia.org/property/>
 PREFIX schema: <http://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?band ?album ?genre WHERE {
-  ?band rdf:type dbo:Band .
-  ?album rdf:type schema:MusicAlbum .
-  ?band dbo:genre ?genre .
-  ?album dbp:artist ?band .
-} LIMIT 100
+SELECT DISTINCT ?property
+WHERE {
+     VALUES (?property ) {
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph0-nh4cl")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph-unkn-m3")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph8-unkn")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph0-cohex")
+     ("http://w3id.org/glosis/model/procedure#exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas")
+     }
+}
