@@ -71,7 +71,6 @@
 #+   "value": {
 #+     "obs": "?obs",
 #+     "value": "?value",
-#+     "trick": "?trick",
 #+   },
 #+ }
 
@@ -90,5 +89,5 @@ WHERE {
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
-    FILTER (?value > ?_minValue_integer)
+    FILTER (?value > ?_minValue_integer) .
 }
