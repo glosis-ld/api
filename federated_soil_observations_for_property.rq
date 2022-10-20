@@ -71,6 +71,7 @@
 #+   "value": {
 #+     "obs": "?obs",
 #+     "value": "?value",
+#+     "trick": "?trick",
 #+   },
 #+ }
 
