@@ -385,7 +385,7 @@ WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay ;
-         sosa:usedProcedure ?_usedProcedure .
+         sosa:usedProcedure ?_usedProcedure_iri .
     ?res qudt:numericValue ?value .
     ?site iso:Site.typicalProfile/iso:Profile.element ?lay ;
          geo:hasGeometry/geo:asWKT ?geom .
