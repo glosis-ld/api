@@ -4,7 +4,7 @@
 #+ tags: [ "json" ]
 #+ method: "GET"
 #+ enumerate:
-#+   - usedProcedure
+#+   - usedProcedure,
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
 #+     - http://w3id.org/glosis/model/layerhorizon#MolybdenumTotalElements
