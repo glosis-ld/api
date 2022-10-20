@@ -85,8 +85,5 @@ WHERE {
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
-    ?site iso:Site.typicalProfile/iso:Profile.element ?lay ;
-         geo:hasGeometry/geo:asWKT ?geom .
-    OPTIONAL { ?s ?p ?_geoWKT }
-    FILTER (geof:sfIntersects(?geom, bif:st_geomfromtext(?_geoWKT)))
+    ?site iso:Site.typicalProfile/iso:Profile.element ?lay .
 }
