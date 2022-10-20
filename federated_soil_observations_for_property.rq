@@ -89,5 +89,6 @@ WHERE {
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
+    OPTIONAL { ?s ?p ?_minValue_integer }
     FILTER (?value > ?_minValue_integer) .
-}
+} limit 10
