@@ -19,7 +19,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT count (DISTINCT ?site) as ?total_survey_points
 WHERE {
-    ?obs ?_physioChemicalProperty_iri ;
+    ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
          sosa:hasFeatureOfInterest ?lay .
     ?res qudt:numericValue ?value .
@@ -31,5 +31,4 @@ WHERE {
     ?lu_res rdf:type|skos:broader* ?lu_code
     ?lu_code skos:prefLabel ?label .
     ?label bif:contains ?_landUseLabel .
-    OPTIONAL { ?s ?p ?_landUseLabel }
 } 
