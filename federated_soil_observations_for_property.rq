@@ -68,7 +68,7 @@
 #+ transform: {
 #+   "physioChemicalProperty": "?property",
 #+   "$anchor": "physioChemicalProperty",
-#+   "total_survey_points": "?total_survey_points",
+#+   "obs": "?obs",
 #+ }
 
 
@@ -80,7 +80,7 @@ PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX iso: <http://w3id.org/glosis/model/iso28258/2013#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT (COUNT(DISTINCT ?site) as ?total_survey_points) (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property) (CONCAT(STR(?_minValue_integer), "-trick") as ?trick)
+SELECT ?obs (REPLACE(STR(?_physioChemicalProperty_iri), "^.*#([^#]*)$", "$1") as ?property) (CONCAT(STR(?_minValue_integer), "-trick") as ?trick)
 WHERE {
     ?obs a ?_physioChemicalProperty_iri ;
          sosa:hasResult ?res ;
