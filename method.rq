@@ -1,4 +1,5 @@
 #+ method: POST
+#+ endpoint: "https://www.foodie-cloud.org/sparql"
 
 SELECT DISTINCT ?property
 WHERE {
