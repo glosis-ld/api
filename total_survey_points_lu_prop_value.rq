@@ -1,4 +1,4 @@
-#+ summary: "Retrieve the average NitrogenTotal value for a specific geospatial region"
+#+ summary: "Retrieve the total number of survey points, for a specific physioChemical property that has value over a specified threshold (e.g. 2), measured in a land use of specified type (e.g., AGRICULTURE, FORESTRY, 'PRIMARY SECTOR', etc.)"
 #+ description: "NOTE: make sure response content type is application/json"
 #+ endpoint: "https://www.foodie-cloud.org/sparql"
 #+ tags: [ "json" ]

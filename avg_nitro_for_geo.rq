@@ -1,4 +1,4 @@
-#+ summary: "Retrieve the average NitrogenTotal value for a specific geospatial region"
+#+ summary: "Retrieve the average NitrogenTotal value in a specific geospatial region (e.g., POLYGON((15.130859375 53.608839752333274,22.25 53.608839752333274,22.25 50.69823629030404,15.130859375 50.69823629030404,15.130859375 53.608839752333274)))"
 #+ description: "NOTE: make sure response content type is application/json"
 #+ endpoint: "https://www.foodie-cloud.org/sparql"
 #+ tags: [ "json" ]
