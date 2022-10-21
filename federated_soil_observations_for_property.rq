@@ -3,6 +3,7 @@
 #+ endpoint: "https://www.foodie-cloud.org/sparql"
 #+ tags: [ "json" ]
 #+ method: "GET"
+#+ pagination: 100
 #+ enumerate:
 #+   - physioChemicalProperty:
 #+     - http://w3id.org/glosis/model/layerhorizon#CalciumExchangeableBases
