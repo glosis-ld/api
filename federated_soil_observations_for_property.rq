@@ -99,4 +99,18 @@ WHERE
        FILTER (?value > ?_minValue_integer) .
     }
   }
-} limit 10
+  UNION
+  {
+    SELECT ?obs ?value 
+    WHERE
+    {
+       SERVICE <https://virtuoso.isric.org/sparql/> { 
+         ?obs a ?_physioChemicalProperty_iri ;
+            sosa:hasResult ?res ;
+            sosa:hasFeatureOfInterest ?lay .
+         ?res qudt:numericValue ?value .
+         FILTER (?value > ?_minValue_integer) .
+       }
+    }
+  } 
+}
