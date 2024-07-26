@@ -95,9 +95,9 @@ WHERE {
         ?n a ramon:NUTSRegion .
         ?n rdfs:label ?l .
         ?n geo:asWKT ?g_nuts .
-        ?n ramon:level 0.
+        ?n ramon:level 1.
         #?l bif:contains ?_nutsCode .
-      } limit 35
+      } limit 230
     }
     FILTER (geof:sfIntersects(?geom, ?g_nuts))
 } 
